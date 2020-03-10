@@ -1,0 +1,48 @@
+.unslider-arrow {
+    position: absolute;
+    cursor: pointer;
+    color: transparent;
+    display: block;
+    width: 32px;
+    height: 64px;
+    margin-top: -32px;
+    top: 50%;
+    overflow: hidden;
+    opacity: 0.2;
+}
+.unslider-arrow.prev {
+    left: 0;
+    right: auto;
+}
+.unslider-arrow.next {
+    left: auto;
+    right: 0;
+}
+.unslider:hover .unslider-arrow {
+    opacity: 0.5;
+    transition: opacity 1s;
+    background-color: black;
+}
+.unslider-arrow.prev:after, .unslider-arrow.next:after {
+    content: "";
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 10px;
+    color: white;
+}
+.unslider-arrow.prev:after {
+    position: absolute;
+    left: 10px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+.unslider-arrow.next:after {
+    position: absolute;
+    right: 10px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+.unslider-arrow.prev:after:hover, .unslider-arrow.next:after:hover {
+    opacity: 1;
+}
